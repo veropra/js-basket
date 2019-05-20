@@ -12,21 +12,44 @@
   <div class="random">
     <h1>BASKET PLAYERS</h1>
     <div class="barra">
-      <input name="players" value="" class="text" placeholder="ID Players">
-      <button type="button" name="button">Cerca</button>
-    </div>
-  <!-- SCHEDA GIOCATORE -->
-    <div class="container">
-      <div class="lista">
-        <div>Id: </div>
-        <div>N°Punti: </div>
-        <div>N°Rimbalzi: </div>
-        <div>Falli: </div>
-        <div>% 2 punti: </div>
-        <div>% 3 punti: </div>
-      </div>
+      <input name="players" value="" class="text" placeholder="ID PLAYERS">
+      <button type="button" name="button">CERCA!</button>
     </div>
 
+    <!-- Handlebars templates -->
+   <script id="list-template" type="text/x-handlebars-template">
+    <div class="container">
+      <div class="proprerty">
+        <span>ID</span>
+        <span>{{id}}</span>
+      </div>
+      <div class="proprerty">
+        <span>N° PUNTI FATTI</span>
+        <span>{{N°PuntiFatti}}</span>
+      </div>
+      <div class="proprerty">
+        <span>N° RIMBALZI </span>
+        <span>{{rimbalzi}}</span>
+      </div>
+      <div class="property">
+        <span>FALLI </span>
+        <span>{{falli}}</span>
+      </div>
+      <div class="property">
+        <span>% TIRI 2 PUNTI</span>
+        <span>{{tiriduepunti}}</span>
+      </div>
+      <div class="proprerty">
+        <span>% TIRI 3 PUNTI </span>
+        <span>{{tiritrepunti}}</span>
+      </div>
+    </div>
+   </script>
+
+   <script id="playerList-template" type="text/x-handlebars-template">
+       <p class="player" id="{{id}}">{{}}</p>
+   </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
